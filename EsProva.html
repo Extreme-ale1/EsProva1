@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <font face="Verdana">
+
+        <h1>INSERIMENTO DATI PAESE</h1>
+
+        <form action="EsProva.php" method="post">
+            <table border="1" width="500">
+                <tr>
+                <td bgcolor="LightBlue">Paese</td>
+                <td> 
+                    <select name="paese">    <!-- ciò che viene passato al php è il name -->
+                        <option value="Italia">Italia</option>      <!-- a php viene passato value -->
+                        <option value="Francia">Francia</option>
+                        <option value="Germania">Germania</option>
+                        <option value="Regno Unito">Regno Unito</option>
+                    </select>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td bgcolor="Lightblue">Capitale</td>
+                <td>
+                    <input type="text" name="capitale">
+                </td>
+            </tr>
+
+
+            <tr>
+                <td bgcolor="LightBlue">Tipo di governo</td>
+                <td>
+                    <input type="radio" name="governo" value="Repubblica">     <!-- crea il cerchietto da spuntare (con scelta singola)-->
+                    <label for="repubblica">Repubblica</label>
+
+                    <input type="radio" name="governo" value="Monarchia">
+                    <label for="monarchia">Monarchia</label>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td bgcolor="LightBlue">Organizzazioni</td>
+                <td>
+                    <input type="checkbox" name="organizzazioni[]" value="UE">    <!-- crea le caselle da spuntare (con scelta multipla) e, si usa [] per selezionarne REALMENTE PIU'-->
+                    <label for="UE">UE</label>
+
+                    <input type="checkbox" name="organizzazioni[]" value="NATO">
+                    <label for="NATO">NATO</label>
+
+                    <input type="checkbox" name="organizzazioni[]" value="ONU">
+                    <label for="ONU">ONU</label>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td bgcolor="LightBlue">Descrizione</td>
+                <td>
+                    <textarea name="descrizione" rows="8">Informazioni Aggiuntive</textarea>   <!-- rows indica quante righe deve mostrare inizialmente la textarea -->
+                </td>
+            </tr>
+            </table>
+
+            <br>
+
+            <input type="submit" value="INVIA">
+            <input type="reset" value="CANCELLA">
+        </form>
+    </font>
+</body>
+</html>
